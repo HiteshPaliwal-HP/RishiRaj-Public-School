@@ -303,7 +303,7 @@ export function Admissions() {
           <div className="admissions__team">
             <h3>{t('admissionsPage.contactTeam')}</h3>
             <p>
-              📞 {site.phones[0]} · {site.emails[1]}
+              📞 {site.phones[0]} · {site.emails[0]}
             </p>
             <p className="muted">Office: Mon–Sat, 9:00 AM – 4:00 PM</p>
           </div>
