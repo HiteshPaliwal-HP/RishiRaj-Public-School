@@ -1,0 +1,47 @@
+.testimonials__quote {
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.testimonials__quote p {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+}
+
+.testimonials__quote footer {
+  font-size: 0.95rem;
+}
+
+.muted-light {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.testimonials__stars {
+  margin-top: 0.5rem;
+  color: var(--secondary);
+  letter-spacing: 0.15em;
+}
+
+.testimonials__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.testimonials__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 0;
+}
+
+.testimonials__dot.is-active {
+  background: var(--secondary);
+  transform: scale(1.15);
+}

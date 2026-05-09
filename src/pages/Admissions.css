@@ -1,0 +1,171 @@
+.admissions-banner {
+  background: var(--rr-gold);
+  color: var(--rr-ink);
+  text-align: center;
+  font-weight: 800;
+  padding: 0.85rem 1rem;
+}
+
+.admissions__medium-label {
+  font-weight: 700;
+  color: var(--rr-gold);
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admissions__overview {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .admissions__overview {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.admissions__card {
+  padding: 1.25rem;
+}
+
+.admissions__step {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.admissions__step-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--rr-gold);
+  color: var(--rr-ink);
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+
+.admissions__steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .admissions__steps {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.admissions__docs {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .admissions__docs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.admissions__table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.admissions__table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--rr-surface);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--rr-border);
+}
+
+.admissions__table th,
+.admissions__table td {
+  border: 1px solid var(--rr-border);
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+}
+
+.admissions__table th {
+  background: var(--rr-ink);
+  color: #fff;
+}
+
+.admissions__dates {
+  border: 2px solid var(--rr-gold);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin: 2rem 0;
+  background: rgba(230, 175, 46, 0.1);
+}
+
+.admissions__team {
+  margin-bottom: 2rem;
+}
+
+.admissions__faq-item {
+  border-bottom: 1px solid var(--rr-border);
+}
+
+.admissions__faq-q {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 0;
+  border: none;
+  background: none;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--rr-ink);
+}
+
+.admissions__faq-a {
+  margin: 0 0 1rem;
+  padding-left: 0.25rem;
+}
+
+.admissions__form {
+  display: grid;
+  gap: 1rem;
+  max-width: 520px;
+}
+
+.admissions__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.admissions__form input,
+.admissions__form select,
+.admissions__form textarea {
+  padding: 0.55rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--rr-border);
+  font: inherit;
+}
+
+.admissions__form-feedback {
+  margin-bottom: 1rem;
+}
+
+.admissions__success {
+  color: var(--success);
+  font-weight: 700;
+}
+
+.ui-btn--block {
+  width: 100%;
+}

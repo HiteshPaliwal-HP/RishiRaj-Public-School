@@ -1,0 +1,78 @@
+.events__grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .events__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.events__badge {
+  display: inline-block;
+  font-weight: 800;
+  color: var(--rr-ink);
+  background: rgba(230, 175, 46, 0.28);
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.events__meta {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.events__link {
+  border: none;
+  background: none;
+  color: var(--rr-ink-soft);
+  font-weight: 700;
+  padding: 0;
+  cursor: pointer;
+}
+
+.events__thumb {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.events__date {
+  font-size: 0.85rem;
+  color: var(--rr-muted);
+  margin-bottom: 0.25rem;
+}
+
+.events__achieve {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.events__achieve-card {
+  flex: 0 0 240px;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.events__board {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.events__note {
+  background: rgba(230, 175, 46, 0.12);
+  border: 1px solid var(--rr-border);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(10, 17, 40, 0.04);
+  font-size: 0.95rem;
+}

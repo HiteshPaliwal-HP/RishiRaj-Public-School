@@ -1,0 +1,65 @@
+/* Shared inner-page surfaces (parity with Home emergent blocks) */
+
+.em-section {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.em-section--muted {
+  background: #f8f9fa;
+}
+
+.em-card {
+  background: var(--rr-surface);
+  border: 1px solid var(--rr-border);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(10, 17, 40, 0.06);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hover: lift + ink veil (GPU-friendly; shadow stepped not animated every frame) */
+.em-card--interactive {
+  position: relative;
+  overflow: hidden;
+}
+
+.em-card--interactive::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(165deg, rgba(10, 17, 40, 0.07) 0%, rgba(10, 17, 40, 0.02) 55%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.em-card--interactive:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(10, 17, 40, 0.1);
+}
+
+.em-card--interactive:hover::after {
+  opacity: 1;
+}
+
+/* Image / media tiles: same sheen + lift, no white card fill */
+.em-card--ghost {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .em-card--interactive,
+  .em-card--interactive:hover {
+    transform: none;
+    transition: none;
+  }
+
+  .em-card--interactive::after {
+    transition: none;
+  }
+}

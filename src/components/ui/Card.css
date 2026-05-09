@@ -1,0 +1,4 @@
+.ui-card {
+  /* Composed with .em-card in Card.tsx for Emergent parity */
+  padding: 1.5rem;
+}

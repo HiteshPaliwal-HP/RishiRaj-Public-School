@@ -1,0 +1,104 @@
+.faculty-stats__inner {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.faculty__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.faculty__tab.is-active {
+  border-color: var(--rr-ink);
+  color: var(--rr-ink);
+  box-shadow: 0 4px 18px rgba(10, 17, 40, 0.08);
+}
+
+.faculty__tab {
+  border: 1px solid var(--rr-border);
+  background: var(--rr-surface);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-weight: 600;
+  color: var(--rr-muted);
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.faculty__tab:hover {
+  color: var(--rr-ink);
+}
+
+.faculty__tab:focus-visible {
+  outline: 2px solid var(--rr-gold);
+  outline-offset: 2px;
+}
+
+.faculty__grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .faculty__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .faculty__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.faculty__photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 0.75rem;
+  border: 3px solid var(--rr-gold);
+}
+
+.faculty__badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(10, 17, 40, 0.08);
+  color: var(--rr-ink);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+}
+
+.faculty__meta {
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.faculty__bio {
+  font-size: 0.9rem;
+  margin-top: 0.65rem;
+}
+
+.faculty__join {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.faculty__join-link {
+  font-weight: 800;
+  color: var(--rr-ink-soft);
+}
+
+.faculty__grid .ui-card {
+  text-align: center;
+}

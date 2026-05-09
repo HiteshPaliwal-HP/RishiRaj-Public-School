@@ -1,0 +1,19 @@
+.programs__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .programs__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.programs__icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.programs__link {
+  margin-top: 1rem;
+}

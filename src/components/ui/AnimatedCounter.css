@@ -1,0 +1,17 @@
+.animated-counter {
+  text-align: center;
+  padding: 1rem;
+}
+
+.animated-counter__value {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--secondary-light);
+  font-weight: 800;
+}
+
+.animated-counter__label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.88);
+  margin-top: 0.35rem;
+}

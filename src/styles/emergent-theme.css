@@ -1,0 +1,109 @@
+/* Emergent preview parity — design tokens + layout helpers */
+:root {
+  --rr-ink: #0a1128;
+  --rr-ink-soft: #111b36;
+  --rr-gold: #e6af2e;
+  --rr-gold-soft: #f4c95d;
+  --rr-bg: #f9f9f8;
+  --rr-surface: #ffffff;
+  --rr-border: #e2e2e2;
+  --rr-text: #111827;
+  --rr-muted: #4b5563;
+  /* Map legacy vars used across older CSS */
+  --primary: var(--rr-ink);
+  --primary-light: var(--rr-ink-soft);
+  --secondary: var(--rr-gold);
+  --secondary-light: var(--rr-gold-soft);
+  --bg-light: var(--rr-bg);
+  --bg-white: var(--rr-surface);
+  --text-dark: var(--rr-text);
+  --text-muted: var(--rr-muted);
+  --border: var(--rr-border);
+  --font-display: 'Outfit', 'Noto Sans Devanagari', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'DM Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+  --font-label: 'DM Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--rr-bg);
+  color: var(--rr-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: var(--rr-ink);
+  color: var(--rr-gold);
+}
+
+.rr-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .rr-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.rr-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--rr-muted);
+}
+
+.rr-eyebrow--on-dark {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.rr-grain {
+  position: relative;
+}
+
+.rr-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>");
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+}
+
+.rr-link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.35s ease;
+}
+
+.rr-link-underline:hover {
+  background-size: 100% 1px;
+}
+

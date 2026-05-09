@@ -1,0 +1,58 @@
+import type { SchoolEvent } from '../types/content'
+
+export const eventsData: SchoolEvent[] = [
+  {
+    id: 'e1',
+    title: 'Annual Sports Day',
+    description: 'Track and field, team games, and house championships on the main ground.',
+    dateISO: '2026-03-15',
+    time: '9:00 AM',
+    venue: 'School Ground',
+    image: 'https://images.unsplash.com/photo-1461896836934-44fe9279683c?w=800&q=80',
+    upcoming: true,
+  },
+  {
+    id: 'e2',
+    title: 'Science Exhibition',
+    description: 'Projects, models, and demonstrations from middle and senior students.',
+    dateISO: '2026-04-05',
+    time: '10:00 AM',
+    venue: 'School Hall',
+    image: 'https://images.unsplash.com/photo-1532094349884-543ba11d1546?w=800&q=80',
+    upcoming: true,
+  },
+  {
+    id: 'e3',
+    title: 'Parent–Teacher Meeting',
+    description: 'Discuss progress, goals, and support strategies with class teachers.',
+    dateISO: '2026-04-20',
+    time: '9:30 AM',
+    venue: 'All Classrooms',
+    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80',
+    upcoming: true,
+  },
+  {
+    id: 'e4',
+    title: 'Independence Day Celebration',
+    description: 'Patriotic performances, march-past, and cultural programmes.',
+    dateISO: '2025-08-15',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80',
+    upcoming: false,
+  },
+  {
+    id: 'e5',
+    title: 'Annual Day 2025',
+    description: 'Music, dance, drama, and awards night celebrating student talent.',
+    dateISO: '2025-12-18',
+    image: 'https://images.unsplash.com/photo-1517457373958-b29db4952d7b?w=800&q=80',
+    upcoming: false,
+  },
+  {
+    id: 'e6',
+    title: 'District Quiz — Runners Up',
+    description: 'Our senior team placed second among 24 schools in the block quiz.',
+    dateISO: '2025-11-02',
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80',
+    upcoming: false,
+  },
+]

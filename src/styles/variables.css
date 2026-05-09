@@ -1,0 +1,23 @@
+/* Base fallbacks before emergent-theme.css overrides with --rr-* aliases */
+:root {
+  --primary: #0a1128;
+  --primary-light: #111b36;
+  --secondary: #e6af2e;
+  --secondary-light: #f4c95d;
+  --accent: #e84c3d;
+  --bg-light: #f9f9f8;
+  --bg-white: #ffffff;
+  --text-dark: #111827;
+  --text-muted: #4b5563;
+  --border: #e2e2e2;
+  --success: #2ecc71;
+  --font-display: 'Outfit', 'Noto Sans Devanagari', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'DM Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+  --font-label: 'DM Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+  --shadow-nav: 0 4px 24px rgba(26, 58, 92, 0.12);
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --max-width: 1200px;
+  --header-height: 88px;
+  --header-height-scrolled: 68px;
+}
