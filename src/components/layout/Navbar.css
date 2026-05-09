@@ -341,6 +341,7 @@
 .em-nav__drawer {
   position: fixed;
   inset: 5rem 0 0 0;
+  z-index: 49;
   background: rgba(10, 17, 40, 0.97);
   color: #fff;
   transform: translateX(100%);
