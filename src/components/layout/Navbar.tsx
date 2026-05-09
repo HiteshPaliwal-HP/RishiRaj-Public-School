@@ -44,73 +44,76 @@ export function Navbar() {
   }
 
   return (
-    <header
-      className={`em-nav ${scrolled ? 'em-nav--scrolled' : ''} ${isHome ? 'em-nav--home' : ''} ${onHero ? 'em-nav--on-hero' : ''}`.trim()}
-    >
-      <div className="rr-container em-nav__inner">
-        <Link to="/" className="em-nav__brand">
-          <span className="em-nav__brand-icon" aria-hidden>
-            <GradIcon />
-          </span>
-          <span className="em-nav__brand-text">
-            <span className="em-nav__brand-name">{site.schoolName}</span>
-            <span className="em-nav__brand-loc">{site.locationLine}</span>
-          </span>
-        </Link>
+    <>
+      <header
+        className={`em-nav ${scrolled ? 'em-nav--scrolled' : ''} ${isHome ? 'em-nav--home' : ''} ${onHero ? 'em-nav--on-hero' : ''}`.trim()}
+      >
+        <div className="rr-container em-nav__inner">
+          <Link to="/" className="em-nav__brand">
+            <span className="em-nav__brand-icon" aria-hidden>
+              <GradIcon />
+            </span>
+            <span className="em-nav__brand-text">
+              <span className="em-nav__brand-name">{site.schoolName}</span>
+              <span className="em-nav__brand-loc">{site.locationLine}</span>
+            </span>
+          </Link>
 
-        <nav className="em-nav__desktop" aria-label="Primary">
-          {PRIMARY_NAV.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              end={item.to === '/'}
-              className={({ isActive }) =>
-                `em-nav__link ${isActive ? 'em-nav__link--active' : ''}`.trim()
-              }
-            >
-              <span className="em-nav__link-inner">
-                {t(`nav.${item.key}`)}
-                <span className="em-nav__underline" aria-hidden />
-              </span>
-            </NavLink>
-          ))}
-        </nav>
+          <nav className="em-nav__desktop" aria-label="Primary">
+            {PRIMARY_NAV.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                end={item.to === '/'}
+                className={({ isActive }) =>
+                  `em-nav__link ${isActive ? 'em-nav__link--active' : ''}`.trim()
+                }
+              >
+                <span className="em-nav__link-inner">
+                  {t(`nav.${item.key}`)}
+                  <span className="em-nav__underline" aria-hidden />
+                </span>
+              </NavLink>
+            ))}
+          </nav>
 
-        <div className="em-nav__actions">
-          <div className="em-nav__lang" role="group" aria-label="Language">
+          <div className="em-nav__actions">
+            <div className="em-nav__lang" role="group" aria-label="Language">
+              <button
+                type="button"
+                className={`em-nav__lang-btn ${i18n.language === 'en' ? 'is-active' : ''}`.trim()}
+                onClick={() => setLang('en')}
+              >
+                {t('nav.langEn')}
+              </button>
+              <button
+                type="button"
+                className={`em-nav__lang-btn ${i18n.language === 'hi' ? 'is-active' : ''}`.trim()}
+                onClick={() => setLang('hi')}
+              >
+                {t('nav.langHi')}
+              </button>
+            </div>
+            <Link to="/admissions" className="em-nav__cta">
+              {t('nav.admissionsOpen')}
+              <span className="em-nav__cta-dot" aria-hidden />
+            </Link>
             <button
               type="button"
-              className={`em-nav__lang-btn ${i18n.language === 'en' ? 'is-active' : ''}`.trim()}
-              onClick={() => setLang('en')}
+              className={`em-nav__burger ${open ? 'is-open' : ''}`.trim()}
+              aria-expanded={open}
+              aria-controls="em-mobile-menu"
+              onClick={() => setOpen((v) => !v)}
             >
-              {t('nav.langEn')}
-            </button>
-            <button
-              type="button"
-              className={`em-nav__lang-btn ${i18n.language === 'hi' ? 'is-active' : ''}`.trim()}
-              onClick={() => setLang('hi')}
-            >
-              {t('nav.langHi')}
+              <span />
+              <span />
+              <span />
             </button>
           </div>
-          <Link to="/admissions" className="em-nav__cta">
-            {t('nav.admissionsOpen')}
-            <span className="em-nav__cta-dot" aria-hidden />
-          </Link>
-          <button
-            type="button"
-            className={`em-nav__burger ${open ? 'is-open' : ''}`.trim()}
-            aria-expanded={open}
-            aria-controls="em-mobile-menu"
-            onClick={() => setOpen((v) => !v)}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
         </div>
-      </div>
+      </header>
 
+      {/* Drawer lives outside <header> so backdrop-filter doesn't trap it */}
       <div id="em-mobile-menu" className={`em-nav__drawer ${open ? 'is-open' : ''}`.trim()}>
         <div className="em-nav__drawer-inner">
           {PRIMARY_NAV.map((item) => (
@@ -131,7 +134,7 @@ export function Navbar() {
           </Link>
         </div>
       </div>
-    </header>
+    </>
   )
 }
 
